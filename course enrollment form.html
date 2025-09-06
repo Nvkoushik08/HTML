@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Course Enrollment Form</title>
+<style>
+    body {
+        background-color: lightblue;
+    }
+    form {
+        background-color: white;
+        border: 1px solid black;
+        width: 250px;
+        padding: 10px;
+        margin: auto;
+    }
+    label {
+        font-weight: bold;
+    }
+    input {
+        margin-bottom: 5px;
+        padding: 5px;
+        width: 95%;
+    }
+    
+    input:required:invalid {
+        border: 2px solid red;
+    }
+    input[type="submit"] {
+        background-color: green;
+        color: white;
+        border: none;
+        padding: 8px;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: darkgreen;
+    }
+   
+    input[type="checkbox"], input[type="radio"] {
+        width: auto;
+        margin-right: 5px;
+    }
+</style>
+</head>
+<body>
+
+<h2 style="text-align:center;">Course Enrollment</h2>
+
+<form>
+    <label>Student Name:</label><br>
+    <input type="text" name="student_name" required><br>
+
+    <label>Roll No:</label><br>
+    <input type="number" name="roll_no" required><br>
+
+    <label>Email:</label><br>
+    <input type="email" name="email" placeholder="example@mail.com" required><br>
+
+    <label>Select Courses:</label><br>
+    <input type="checkbox" name="course" value="HTML"> HTML<br>
+    <input type="checkbox" name="course" value="CSS"> CSS<br>
+    <input type="checkbox" name="course" value="JavaScript"> JavaScript<br>
+    <input type="checkbox" name="course" value="Python"> Python<br>
+    <input type="checkbox" name="course" value="Java"> Java<br><br>
+
+    <label>Mode of Study:</label><br>
+    <input type="radio" name="mode" value="Online" required> Online<br>
+    <input type="radio" name="mode" value="Offline" required> Offline<br><br>
+
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+</form>
+
+</body>
+</html>
