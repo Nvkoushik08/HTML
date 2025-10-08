@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product - Management Table</title>
+  <style>
+    body {
+      background: #1c1f38;
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #fff;
+      min-height: 100vh;
+    }
+    .main-header {
+      font-size: 2em;
+      font-weight: 400;
+      margin-left: 32px;
+      margin-top: 24px;
+      color: #e1e8fa;
+    }
+    .main-header b {
+      color: #4ca3fd;
+      font-weight: 700;
+    }
+    .card {
+      background: linear-gradient(135deg, #202447, #171a35);
+      border-radius: 14px;
+      max-width: 1250px;
+      margin: 36px auto 0 auto;
+      padding: 34px 32px;
+      box-shadow: 0 8px 32px rgba(60,83,216,0.25);
+    }
+    .section-title {
+      font-size: 1.2em;
+      color: #e1e8fa;
+      margin-bottom: 18px;
+      font-weight: 600;
+    }
+    .create-btn {
+      background: linear-gradient(90deg, #36d370, #2db85e);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 11px 34px;
+      font-size: 1em;
+      font-weight: 600;
+      margin-bottom: 28px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(54,211,112,0.25);
+      letter-spacing: .2px;
+      transition: all 0.3s;
+    }
+    .create-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(54,211,112,0.35);
+    }
+    .search-box {
+      float: right;
+      background: #131529;
+      color: #cdd7f4;
+      padding: 13px 18px;
+      border-radius: 8px;
+      border: 1px solid #2b2f52;
+      font-size: 1em;
+      margin-top: -60px;
+      margin-bottom: 44px;
+      transition: all 0.3s;
+    }
+    .search-box:focus {
+      outline: none;
+      border-color: #4ca3fd;
+      box-shadow: 0 0 6px rgba(76,163,253,0.6);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 22px;
+      font-size: 1em;
+    }
+    th, td {
+      text-align: left;
+      padding: 16px 15px;
+      border-bottom: 1px solid #2d3158;
+      font-size: 1em;
+      color: #d7def1;
+    }
+    th {
+      background: #151835;
+      color: #bfc6da;
+      font-weight: 600;
+      letter-spacing: .3px;
+    }
+    tr:nth-child(even) {
+      background: #1f2344;
+    }
+    tr:hover {
+      background: #2a2e57;
+      transition: 0.25s;
+    }
+    .title-link {
+      color: #4ca3fd;
+      text-decoration: none;
+      font-weight: 500;
+      letter-spacing: .3px;
+    }
+    .title-link:hover {
+      text-decoration: underline;
+    }
+    .subtitle {
+      color: #a8b5df;
+      font-size: .95em;
+    }
+    .price {
+      color: #36d370;
+      font-weight: 600;
+    }
+    .rating {
+      color: #ffb450;
+      font-weight: 600;
+      font-size: 1.05em;
+    }
+    .star {
+      margin-left: 3px;
+      color: #ffb450;
+      font-size: 1.15em;
+      vertical-align: middle;
+    }
+    .api-btn {
+      padding: 7px 20px;
+      border-radius: 6px;
+      border: none;
+      font-size: .95em;
+      font-weight: 500;
+      margin-right: 9px;
+      cursor: pointer;
+      transition: all 0.25s;
+    }
+    .edit {
+      background: #2871fa;
+      color: #fff;
+    }
+    .edit:hover {
+      background: #1f5ed0;
+      transform: scale(1.05);
+    }
+    .delete {
+      background: #fa504a;
+      color: #fff;
+    }
+    .delete:hover {
+      background: #d8433e;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h2 class="main-header">Product - <b>Management</b></h2>
+  <div class="card">
+    <div class="section-title">List of Products</div>
+    <button class="create-btn">+ Create Product</button>
+    <input type="text" class="search-box" placeholder="🔍 Search products..." />
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>TITLE</th>
+          <th>SUBTITLE</th>
+          <th>PRICE($)</th>
+          <th>RATING</th>
+          <th>ACTIONS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><a class="title-link" href="#">Trainers</a></td>
+          <td class="subtitle">Trainers In White</td>
+          <td class="price">76</td>
+          <td class="rating">4.6 <span class="star">&#9733;</span></td>
+          <td>
+            <button class="api-btn edit">Edit</button>
+            <button class="api-btn delete">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><a class="title-link" href="#">Boots</a></td>
+          <td class="subtitle">Trainers In Blue</td>
+          <td class="price">45</td>
+          <td class="rating">4.8 <span class="star">&#9733;</span></td>
+          <td>
+            <button class="api-btn edit">Edit</button>
+            <button class="api-btn delete">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><a class="title-link" href="#">Flat sandals</a></td>
+          <td class="subtitle">Summer Edition</td>
+          <td class="price">55</td>
+          <td class="rating">4.5 <span class="star">&#9733;</span></td>
+          <td>
+            <button class="api-btn edit">Edit</button>
+            <button class="api-btn delete">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
