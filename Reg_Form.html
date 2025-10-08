@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .registration-card {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            padding: 30px 40px;
+            width: 420px;
+        }
+        .registration-card h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+            font-size: 26px;
+        }
+        label {
+            font-weight: 600;
+            color: #555;
+            display: block;
+            margin-bottom: 6px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 10px 12px;
+            margin-bottom: 20px;
+            border: 1.5px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        select:focus {
+            border-color: #6C63FF;
+            box-shadow: 0 0 8px rgba(108, 99, 255, 0.3);
+            outline: none;
+        }
+        .gender-options,
+        .hobbies-options {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .gender-options input,
+        .hobbies-options input {
+            margin-right: 5px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #6C63FF;
+            color: #fff;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #5245c2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="registration-card">
+        <h2>Student Registration</h2>
+        <form action="#">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label>Gender</label>
+            <div class="gender-options">
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="Other">
+                <label for="other">Other</label>
+            </div>
+
+            <label>Hobbies</label>
+            <div class="hobbies-options">
+                <input type="checkbox" id="reading" name="hobbies" value="Reading">
+                <label for="reading">Reading</label>
+                <input type="checkbox" id="sports" name="hobbies" value="Sports">
+                <label for="sports">Sports</label>
+                <input type="checkbox" id="music" name="hobbies" value="Music">
+                <label for="music">Music</label>
+                <input type="checkbox" id="travel" name="hobbies" value="Travel">
+                <label for="travel">Travel</label>
+            </div>
+
+            <label for="course">Course</label>
+            <select id="course" name="course" required>
+                <option value="">--Select Course--</option>
+                <option value="CSE">Computer Science</option>
+                <option value="ECE">Electronics</option>
+                <option value="EEE">Electrical</option>
+                <option value="MECH">Mechanical</option>
+                <option value="CIVIL">Civil</option>
+            </select>
+
+            <div class="buttons">
+                <input type="submit" value="Register">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
