@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pricing Table</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f5f9ff;
+      margin: 40px;
+    }
+    h2 {
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+    table {
+      margin: auto;
+      border-collapse: collapse;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 15px 20px;
+      text-align: center;
+    }
+    th {
+      background-color: #2980b9;
+      color: white;
+      font-size: 18px;
+    }
+    tr:nth-child(odd) td:first-child {
+      background: #d6eaf8;
+      font-weight: bold;
+      text-align: left;
+    }
+    tr:nth-child(even) td:first-child {
+      background: #aed6f1;
+      font-weight: bold;
+      text-align: left;
+    }
+    td {
+      font-size: 14px;
+      color: #333;
+    }
+    /* Highlight Popular Plan */
+    th.popular {
+      background-color: #1f5f8b !important;
+      position: relative;
+    }
+    th.popular::after {
+      content: "★ Popular";
+      position: absolute;
+      top: -12px;
+      right: 10px;
+      font-size: 12px;
+      color: gold;
+    }
+    /* Button Style for Prices */
+    .price-btn {
+      background: #2980b9;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .price-btn:hover {
+      background: #1f5f8b;
+    }
+    /* Hover Effect */
+    table tr:hover td {
+      background: #ecf6fc;
+      transition: 0.3s;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Pricing Plans</h2>
+<table>
+  <tr>
+    <th style="background-color: white; color: #2980b9;">Features</th>
+    <th>Smart Starter</th>
+    <th class="popular">Smart Medium</th>
+    <th>Smart Business</th>
+    <th>Smart Deluxe</th>
+  </tr>
+  <tr>
+    <td>Storage Space</td>
+    <td>512 MB</td>
+    <td>1 GB</td>
+    <td>2 GB</td>
+    <td>4 GB</td>
+  </tr>
+  <tr>
+    <td>Bandwidth</td>
+    <td>50 GB</td>
+    <td>100 GB</td>
+    <td>150 GB</td>
+    <td>Unlimited</td>
+  </tr>
+  <tr>
+    <td>MySql Databases</td>
+    <td>Unlimited</td>
+    <td>Unlimited</td>
+    <td>Unlimited</td>
+    <td>Unlimited</td>
+  </tr>
+  <tr>
+    <td>Setup</td>
+    <td>$19.90</td>
+    <td>$12.90</td>
+    <td>Free</td>
+    <td>Free</td>
+  </tr>
+  <tr>
+    <td>PHP 5</td>
+    <td style="color: #2980b9;">✔</td>
+    <td style="color: #2980b9;">✔</td>
+    <td style="color: #2980b9;">✔</td>
+    <td style="color: #2980b9;">✔</td>
+  </tr>
+  <tr>
+    <td>Ruby on Rails</td>
+    <td style="color: #2980b9;">✔</td>
+    <td style="color: #2980b9;">✔</td>
+    <td style="color: #2980b9;">✔</td>
+    <td style="color: #2980b9;">✔</td>
+  </tr>
+  <tr>
+    <td>Price per month</td>
+    <td><a href="#" class="price-btn">$2.90</a></td>
+    <td><a href="#" class="price-btn">$5.90</a></td>
+    <td><a href="#" class="price-btn">$9.90</a></td>
+    <td><a href="#" class="price-btn">$14.90</a></td>
+  </tr>
+</table>
+
+</body>
+</html>
