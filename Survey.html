@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SmartPhone Survey Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            max-width: 500px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #444;
+        }
+        input[type="text"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 12px;
+            margin-bottom: 15px;
+        }
+        legend {
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>SmartPhone Preferences Survey</h1>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" placeholder="Enter your age" required>
+
+        <label for="budget">Preferred Budget Range:</label>
+        <select id="budget" name="budget">
+            <option value="low">Under ₹15,000</option>
+            <option value="mid">₹15,000 - ₹30,000</option>
+            <option value="high">₹30,000 - ₹60,000</option>
+            <option value="premium">Above ₹60,000</option>
+        </select>
+
+        <fieldset>
+            <legend>Favorite Smartphone Brand:</legend>
+            <input type="radio" id="apple" name="brand" value="Apple">
+            <label for="apple">Apple</label><br>
+            <input type="radio" id="samsung" name="brand" value="Samsung">
+            <label for="samsung">Samsung</label><br>
+            <input type="radio" id="google" name="brand" value="Google">
+            <label for="google">Google</label><br>
+            <input type="radio" id="oneplus" name="brand" value="OnePlus">
+            <label for="oneplus">OnePlus</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Preferred Smartphone Features:</legend>
+            <input type="checkbox" id="5g" name="features" value="5G">
+            <label for="5g">5G Connectivity</label><br>
+            <input type="checkbox" id="foldable" name="features" value="Foldable">
+            <label for="foldable">Foldable Screen</label><br>
+            <input type="checkbox" id="stylus" name="features" value="Stylus">
+            <label for="stylus">Stylus Support</label><br>
+            <input type="checkbox" id="battery" name="features" value="Battery">
+            <label for="battery">Long Battery Life</label><br>
+            <input type="checkbox" id="camera" name="features" value="Camera">
+            <label for="camera">High-Resolution Camera</label><br>
+        </fieldset>
+
+        <label for="comments">Additional Comments:</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Write your feedback here..."></textarea>
+
+        <input type="submit" value="Submit Survey">
+    </form>
+</body>
+</html>
